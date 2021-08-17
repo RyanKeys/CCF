@@ -22,12 +22,19 @@ export default function NewListing(walletAddress) {
     window.location.reload();
   }
 
+  useEffect(() => {});
+
   return (
     <div className="text-light mt-5 pt-5">
       <div className="container btn btn-secondary bg-dark">
         <br />
         <h1>New Crowdfund</h1>
-        <form onSubmit={handleSubmit} className="mx-5 my-2">
+        <form
+          onSubmit={() => {
+            handleSubmit();
+          }}
+          className="mx-5 my-2"
+        >
           <div class="d-flex justify-content-around">
             <div className="mx-2">
               <h5 className="text-bold">Crowdfund Name</h5>
@@ -74,11 +81,7 @@ export default function NewListing(walletAddress) {
           <div>
             <br />
 
-            <button
-              className="btn btn-primary"
-              type="submit"
-              onClick={handleSubmit}
-            >
+            <button className="btn btn-primary" type="submit">
               Submit
             </button>
           </div>
