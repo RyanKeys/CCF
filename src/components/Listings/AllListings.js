@@ -7,7 +7,7 @@ const AllListings = () => {
   // Example POST method implementation:
 
   useEffect(() => {
-    const url = window.location.href + "crowdfunds";
+    const url = window.location.href;
     console.log(url);
     async function postData(url, data = {}) {
       // Default options are marked with *
