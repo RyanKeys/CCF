@@ -7,9 +7,7 @@ const AllListings = () => {
   // Example POST method implementation:
 
   useEffect(() => {
-    const url = window.location.href;
-    console.log(url);
-    async function postData(url, data = {}) {
+    async function postData(url = window.location.href, data = {}) {
       // Default options are marked with *
       const response = await fetch(url, {
         method: "POST",
