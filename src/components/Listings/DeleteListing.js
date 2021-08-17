@@ -13,9 +13,8 @@ const DeleteListing = (href) => {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then(() => {
-      window.location.replace(window.location.hostname);
-    });
+    }).then(() => {});
+    window.location.replace(window.location.hostname);
   }
   useEffect(() => {
     setListingAddress(href.href);

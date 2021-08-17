@@ -48,6 +48,7 @@ app.get("*", function (req, res) {
 
 app.post("/new", ensureOnlyOneListing, (req, res) => {
   const { userAddress, name, description, goalAmount } = req.body;
+  console.log(name);
   const newListing = new Listing({
     userAddress,
     name,

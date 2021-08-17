@@ -17,9 +17,10 @@ export default function NewListing(walletAddress) {
       body: JSON.stringify(requestBody),
     }).then((data) => {
       console.log(data);
-      window.location.href = window.location.host;
-      window.location.replace(`${window.location.hostname}/crowdfund/${userAddress}`);
     });
+    window.location.replace(
+      `${window.location.hostname}/crowdfund/${userAddress}`
+    );
   }
 
   useEffect(() => {});
