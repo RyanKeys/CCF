@@ -16,7 +16,7 @@ export default function ListingDetail(walletAddress) {
     href = href.split("/");
     setListingAddress(href[href.length - 1]);
     async function postData(
-      url = "http://localhost:5000/crowdfund/" + href[href.length - 1]
+      url = "http://" + window.location.hostname + "/" + href[href.length - 1]
     ) {
       // Default options are marked with *
       const response = await fetch(url, {

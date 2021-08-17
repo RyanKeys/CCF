@@ -5,10 +5,7 @@ const DeleteListing = (href) => {
 
   async function deleteData() {
     const url =
-      "http://" +
-      window.location.hostname +
-      ":5000/crowdfund/" +
-      listingAddress;
+      "http://" + window.location.hostname + "/crowdfund/" + listingAddress;
     console.log(url);
     const response = await fetch(url, {
       method: "DELETE",

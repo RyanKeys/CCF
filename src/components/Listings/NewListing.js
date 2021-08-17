@@ -9,8 +9,8 @@ export default function NewListing(walletAddress) {
     const userAddress = walletAddress.walletAddress;
     const requestBody = { userAddress, name, description, goalAmount };
     e.preventDefault();
-    const url = "http://" + window.location.hostname + ":5000/";
-    fetch(url + "new", {
+    const url = window.location.hostname;
+    fetch(url + "/new", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -19,7 +19,7 @@ export default function NewListing(walletAddress) {
     }).then((data) => {
       console.log(data);
     });
-    window.location.href = url + "crowdfunds";
+    window.location.hostname = url + "/crowdfunds";
   };
 
   return (
