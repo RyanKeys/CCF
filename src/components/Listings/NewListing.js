@@ -17,9 +17,9 @@ export default function NewListing(walletAddress) {
       body: JSON.stringify(requestBody),
     }).then((data) => {
       console.log(data);
+      window.location.href = window.location.host;
+      window.location.reload();
     });
-    window.location.href = window.location.host;
-    window.location.reload();
   }
 
   useEffect(() => {});
