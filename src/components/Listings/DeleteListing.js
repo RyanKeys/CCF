@@ -13,7 +13,10 @@ const DeleteListing = (href) => {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then(() => {});
+    }).then(() => {
+      window.location.href = window.location.host;
+      window.location.reload();
+    });
   }
   useEffect(() => {
     setListingAddress(href.href);
@@ -23,9 +26,7 @@ const DeleteListing = (href) => {
     <div>
       <button
         onClick={(e) => {
-          deleteData().then(() => {
-            window.location.assign(window.location.hostname);
-          });
+          deleteData().then((res) => {});
         }}
         className="btn btn-secondary"
       >
