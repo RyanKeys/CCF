@@ -15,9 +15,7 @@ export default function ListingDetail(walletAddress) {
     let href = window.location.href;
     href = href.split("/");
     setListingAddress(href[href.length - 1]);
-    async function postData(
-      url = "http://" + window.location.hostname + "/" + href[href.length - 1]
-    ) {
+    async function postData(url = window.location.href) {
       // Default options are marked with *
       const response = await fetch(url, {
         method: "POST",

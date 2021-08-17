@@ -4,9 +4,7 @@ const DeleteListing = (href) => {
   const [userAddress, setUserAddress] = useState(href.walletAddress);
 
   async function deleteData() {
-    const url =
-      "http://" + window.location.hostname + "/crowdfund/" + listingAddress;
-    console.log(url);
+    const url = window.location.href;
     const response = await fetch(url, {
       method: "DELETE",
       mode: "cors",

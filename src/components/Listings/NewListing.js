@@ -9,7 +9,7 @@ export default function NewListing(walletAddress) {
     const userAddress = walletAddress.walletAddress;
     const requestBody = { userAddress, name, description, goalAmount };
     e.preventDefault();
-    const url = "http://" + window.location.hostname;
+    const url = window.location.href;
     const fetchUrl = url + "/new";
     fetch(fetchUrl, {
       method: "POST",
