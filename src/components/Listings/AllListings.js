@@ -7,11 +7,11 @@ const AllListings = () => {
   // Example POST method implementation:
 
   useEffect(() => {
-    const url = "http://" + window.location.hostname;
+    const url = "http://" + window.location.hostname + "/crowdfunds";
     console.log(url);
     async function postData(url, data = {}) {
       // Default options are marked with *
-      const response = await fetch(url + "/crowdfunds", {
+      const response = await fetch(url, {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
