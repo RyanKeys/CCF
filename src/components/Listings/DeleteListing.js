@@ -14,8 +14,7 @@ const DeleteListing = (href) => {
         "Content-Type": "application/json",
       },
     }).then(() => {
-      window.location.href = window.location.host;
-      window.location.reload();
+      window.location.assign(window.location.hostname);
     });
   }
   useEffect(() => {

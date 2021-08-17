@@ -6,6 +6,7 @@ export default function NewListing(walletAddress) {
   const [description, setDescription] = useState();
 
   async function handleSubmit() {
+    console.log(name);
     const userAddress = walletAddress.walletAddress;
     const requestBody = { userAddress, name, description, goalAmount };
     const url = window.location.href;
@@ -17,8 +18,9 @@ export default function NewListing(walletAddress) {
       body: JSON.stringify(requestBody),
     }).then((data) => {
       console.log(data);
-      window.location.href = window.location.host;
-      window.location.reload();
+      window.location.assign(
+        `${window.location.hostname}/crowdfund/${userAddress}`
+      );
     });
   }
 
