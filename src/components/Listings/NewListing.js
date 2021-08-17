@@ -19,7 +19,8 @@ export default function NewListing(walletAddress) {
     }).then((data) => {
       console.log(data);
     });
-    window.location.hostname = url + "/crowdfunds";
+    window.location.href = window.location.host;
+    window.location.reload();
   };
 
   return (

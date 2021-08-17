@@ -26,6 +26,7 @@ export default function ListingDetail(walletAddress) {
           "Content-Type": "application/json",
         },
       });
+      
       return response.json(); // parses JSON response into native JavaScript objects
     }
 
