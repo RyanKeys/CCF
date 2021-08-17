@@ -70,12 +70,12 @@ const GettingStarted = () => {
             Get started either by viewing the active crowdfunds, or by creating
             your own!
           </h5>
-          <a href="http://localhost:3000/new">
+          <a href={`${window.location.hostname}/new`}>
             <div className="btn btn-primary pb-3 mb-4 mx-2">
               <h3 className="text-center pt-3">Create a Crowdfund</h3>
             </div>
           </a>
-          <a href="http://localhost:3000/crowdfunds">
+          <a href={`${window.location.hostname}/crowdfunds`}>
             <div className="btn btn-secondary pb-3 mb-4 mx-2">
               <h3 className="text-center pt-3">View Crowdfunds</h3>
             </div>
