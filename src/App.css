@@ -2,6 +2,66 @@
   text-align: center;
 }
 
+body {
+  background: rgb(34, 0, 47);
+  background: linear-gradient(
+    120deg,
+    rgba(34, 0, 47, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.bg-primary {
+  border-radius: 15px;
+  background: #5f0084 !important;
+  border-color: #5f0084 !important;
+}
+.navbar {
+  top: 0;
+  transition: all 230ms;
+}
+.btn {
+  border-radius: 15px;
+}
+
+.btn:hover {
+  transform: scale(1.01) perspective(1px);
+  transition: 70ms;
+}
+.btn-primary:hover {
+  background: #5f0084;
+  border-color: #5f0084;
+}
+
+.bg-dark {
+  background: #112 !important;
+}
+.btn-primary {
+  background: #5f0084;
+  border-color: #5f0084;
+}
+
+.btn-secondary {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(255, 255, 255, 0.25);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
