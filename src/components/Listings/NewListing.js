@@ -18,9 +18,6 @@ export default function NewListing(walletAddress) {
       body: JSON.stringify(requestBody),
     }).then((data) => {
       console.log(data);
-      window.location.assign(
-        `${window.location.hostname}/crowdfund/${userAddress}`
-      );
     });
   }
 
@@ -82,7 +79,11 @@ export default function NewListing(walletAddress) {
               className="btn btn-primary"
               type="submit"
               onClick={() => {
-                handleSubmit();
+                handleSubmit().then(() => {
+                  window.location.assign(
+                    `${window.location.hostname}/crowdfund/${walletAddress.walletAddress}`
+                  );
+                });
               }}
             >
               Submit
