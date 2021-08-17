@@ -2,9 +2,7 @@ import metaMaskLogin from "./useMetaMask";
 
 export default async function sendDonation(userAddress, donationAmount) {
   const handleSubmit = async (transactionHash) => {
-    let href = window.location.href;
-    href = href.split("/");
-    const url = "http://localhost:5000/crowdfund/" + href[href.length - 1];
+    const url = window.location.href;
     const response = await fetch(url, {
       method: "PUT",
       mode: "cors",
@@ -37,7 +35,6 @@ export default async function sendDonation(userAddress, donationAmount) {
             handleSubmit(transactionHash).then((res) => {
               console.log(res);
               window.location.reload();
-              
             });
           }
 
