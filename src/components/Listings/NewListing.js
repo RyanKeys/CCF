@@ -27,7 +27,7 @@ export default function NewListing(walletAddress) {
       <div className="container btn btn-secondary bg-dark">
         <br />
         <h1>New Crowdfund</h1>
-        <form onSubmit={handleSubmit()} className="mx-5 my-2">
+        <form className="mx-5 my-2">
           <div class="d-flex justify-content-around">
             <div className="mx-2">
               <h5 className="text-bold">Crowdfund Name</h5>
