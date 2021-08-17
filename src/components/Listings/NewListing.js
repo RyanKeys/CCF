@@ -5,10 +5,9 @@ export default function NewListing(walletAddress) {
   const [goalAmount, setGoalAmount] = useState();
   const [description, setDescription] = useState();
 
-  const handleSubmit = async (e) => {
+  async function handleSubmit() {
     const userAddress = walletAddress.walletAddress;
     const requestBody = { userAddress, name, description, goalAmount };
-    e.preventDefault();
     const url = window.location.href;
     fetch(url, {
       method: "POST",
@@ -21,7 +20,7 @@ export default function NewListing(walletAddress) {
     });
     window.location.href = window.location.host;
     window.location.reload();
-  };
+  }
 
   return (
     <div className="text-light mt-5 pt-5">
@@ -75,7 +74,11 @@ export default function NewListing(walletAddress) {
           <div>
             <br />
 
-            <button className="btn btn-primary" type="submit">
+            <button
+              onClick={handleSubmit()}
+              className="btn btn-primary"
+              type="submit"
+            >
               Submit
             </button>
           </div>
