@@ -11,21 +11,21 @@ const {
 const app = express();
 
 // TURN OFF IN PRODUCTION
-const allowedOrigins = ["http://localhost:3000", "http://localhost:5000"];
-const cors = require("cors");
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
-        const msg =
-          "The CORS policy for this site does not allow access from the specified Origin.";
-        return callback(new Error(msg), false);
-      }
-      return callback(null, true);
-    },
-  })
-);
+// const allowedOrigins = ["http://localhost:3000", "http://localhost:5000"];
+// const cors = require("cors");
+// app.use(
+//   cors({
+//     origin: function (origin, callback) {
+//       if (!origin) return callback(null, true);
+//       if (allowedOrigins.indexOf(origin) === -1) {
+//         const msg =
+//           "The CORS policy for this site does not allow access from the specified Origin.";
+//         return callback(new Error(msg), false);
+//       }
+//       return callback(null, true);
+//     },
+//   })
+// );
 
 app.use(express.json());
 
@@ -37,7 +37,7 @@ mongoose
   .catch((err) => console.log(err));
 
 const Listing = require("./models/Listing");
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.use("/static", express.static("public"));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, "build")));
